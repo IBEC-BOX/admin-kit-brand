@@ -1,18 +1,18 @@
 <?php
 
-namespace VendorName\Skeleton\Models;
+namespace AdminKit\Brand\Models;
 
 use AdminKit\Core\Abstracts\Models\AbstractModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Translatable\HasTranslations;
-use VendorName\Skeleton\Database\Factories\SingleNameFactory;
+use AdminKit\Brand\Database\Factories\BrandFactory;
 
-class SingleName extends AbstractModel
+class Brand extends AbstractModel
 {
     use HasFactory;
     use HasTranslations;
 
-    protected $table = 'migration_table_name';
+    protected $table = 'admin_kit_brand';
 
     protected $fillable = [
         'title',
@@ -26,8 +26,8 @@ class SingleName extends AbstractModel
         'title',
     ];
 
-    protected static function newFactory(): SingleNameFactory
+    protected static function newFactory(): BrandFactory
     {
-        return new SingleNameFactory();
+        return new BrandFactory();
     }
 }

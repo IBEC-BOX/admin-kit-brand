@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use VendorName\Skeleton\UI\API\Controllers\SingleNameController;
+use AdminKit\Brand\UI\API\Controllers\BrandController;
 
-Route::get('/skeleton_without_prefix', [SingleNameController::class, 'index']);
-Route::get('/skeleton_without_prefix/{id}', [SingleNameController::class, 'show']);
+Route::get('/brand', [BrandController::class, 'index']);
+Route::get('/brand/{id}', [BrandController::class, 'show']);
