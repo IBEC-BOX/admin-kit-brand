@@ -5,16 +5,14 @@ declare(strict_types=1);
 namespace AdminKit\Brand\UI\API\Controllers;
 
 use AdminKit\Brand\Models\Brand;
+use AdminKit\Brand\UI\API\Data\BrandData;
 
 class BrandController extends Controller
 {
-    public function index()
+    public function showFirst(): BrandData
     {
-        return Brand::all();
-    }
+        $brand = Brand::query()->first();
 
-    public function show(int $id)
-    {
-        return Brand::findOrFail($id);
+        return BrandData::from($brand);
     }
 }

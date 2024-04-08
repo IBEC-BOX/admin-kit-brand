@@ -2,11 +2,12 @@
 
 return [
     'resource' => [
-        'label' => 'Brand',
-        'plural_label' => 'Brand',
+        'label' => 'Бренд',
+        'plural_label' => 'Бренд',
 
         'id' => 'ID',
-        'title' => 'Title',
+        'site_name' => 'Название сайта',
+        'site_logo' => 'Логотип сайта',
 
         'created_at' => 'Создан',
         'updated_at' => 'Обновлен',

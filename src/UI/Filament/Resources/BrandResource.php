@@ -2,12 +2,12 @@
 
 namespace AdminKit\Brand\UI\Filament\Resources;
 
+use AdminKit\Brand\Models\Brand;
+use AdminKit\Brand\UI\Filament\Resources\BrandResource\Pages;
 use AdminKit\Core\Forms\Components\TranslatableTabs;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use AdminKit\Brand\Models\Brand;
-use AdminKit\Brand\UI\Filament\Resources\BrandResource\Pages;
 
 class BrandResource extends Resource
 {
@@ -19,9 +19,13 @@ class BrandResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\SpatieMediaLibraryFileUpload::make('site_logo')
+                    ->label(__('admin-kit-brand::brand.resource.site_logo'))
+                    ->required()
+                    ->image(),
                 TranslatableTabs::make(fn ($locale) => Forms\Components\Tabs\Tab::make($locale)->schema([
-                    Forms\Components\TextInput::make('title')
-                        ->label(__('admin-kit-brand::brand.resource.title'))
+                    Forms\Components\TextInput::make('site_name.'.$locale)
+                        ->label(__('admin-kit-brand::brand.resource.site_name'))
                         ->required($locale === app()->getLocale()),
                 ])),
             ])
@@ -35,8 +39,8 @@ class BrandResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->label(__('admin-kit-brand::brand.resource.id'))
                     ->sortable(),
-                Tables\Columns\TextColumn::make('title')
-                    ->label(__('admin-kit-brand::brand.resource.title')),
+                Tables\Columns\TextColumn::make('site_name')
+                    ->label(__('admin-kit-brand::brand.resource.site_name')),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label(__('admin-kit-brand::brand.resource.created_at')),
             ])
@@ -76,11 +80,6 @@ class BrandResource extends Resource
     }
 
     public static function getPluralLabel(): ?string
-    {
-        return __('admin-kit-brand::brand.resource.plural_label');
-    }
-
-    public static function getNavigationGroup(): ?string
     {
         return __('admin-kit-brand::brand.resource.plural_label');
     }
