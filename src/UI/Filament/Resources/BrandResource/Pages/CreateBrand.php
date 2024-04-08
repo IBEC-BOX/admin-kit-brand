@@ -2,8 +2,8 @@
 
 namespace AdminKit\Brand\UI\Filament\Resources\BrandResource\Pages;
 
-use Filament\Resources\Pages\CreateRecord;
 use AdminKit\Brand\UI\Filament\Resources\BrandResource;
+use Filament\Resources\Pages\CreateRecord;
 
 class CreateBrand extends CreateRecord
 {

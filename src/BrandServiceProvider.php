@@ -2,10 +2,10 @@
 
 namespace AdminKit\Brand;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use AdminKit\Brand\Commands\BrandCommand;
 use AdminKit\Brand\Providers\RouteServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class BrandServiceProvider extends PackageServiceProvider
 {
