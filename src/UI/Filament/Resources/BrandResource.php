@@ -2,12 +2,12 @@
 
 namespace AdminKit\Brand\UI\Filament\Resources;
 
+use AdminKit\Brand\Models\Brand;
+use AdminKit\Brand\UI\Filament\Resources\BrandResource\Pages;
 use AdminKit\Core\Forms\Components\TranslatableTabs;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use AdminKit\Brand\Models\Brand;
-use AdminKit\Brand\UI\Filament\Resources\BrandResource\Pages;
 
 class BrandResource extends Resource
 {

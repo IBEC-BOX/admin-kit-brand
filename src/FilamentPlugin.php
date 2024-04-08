@@ -2,9 +2,9 @@
 
 namespace AdminKit\Brand;
 
+use AdminKit\Brand\UI\Filament\Resources\BrandResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use AdminKit\Brand\UI\Filament\Resources\BrandResource;
 
 class FilamentPlugin implements Plugin
 {

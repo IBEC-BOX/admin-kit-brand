@@ -2,10 +2,10 @@
 
 namespace AdminKit\Brand\Models;
 
+use AdminKit\Brand\Database\Factories\BrandFactory;
 use AdminKit\Core\Abstracts\Models\AbstractModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Translatable\HasTranslations;
-use AdminKit\Brand\Database\Factories\BrandFactory;
 
 class Brand extends AbstractModel
 {

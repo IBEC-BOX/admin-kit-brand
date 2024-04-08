@@ -2,9 +2,9 @@
 
 namespace AdminKit\Brand\UI\Filament\Resources\BrandResource\Pages;
 
+use AdminKit\Brand\UI\Filament\Resources\BrandResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
-use AdminKit\Brand\UI\Filament\Resources\BrandResource;
 
 class ListBrand extends ListRecords
 {
