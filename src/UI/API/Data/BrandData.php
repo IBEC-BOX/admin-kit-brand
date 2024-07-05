@@ -16,8 +16,7 @@ class BrandData extends Data
     public function __construct(
         public string $siteName,
         public string $siteLogo,
-    ) {
-    }
+    ) {}
 
     public static function fromModel(Brand $brand): self
     {

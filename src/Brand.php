@@ -2,6 +2,4 @@
 
 namespace AdminKit\Brand;
 
-class Brand
-{
-}
+class Brand {}
